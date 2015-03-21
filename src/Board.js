@@ -3,9 +3,7 @@
 */
 function Board() {
   this.grid = [[null, null, null], [null, null, null], [null, null, null]];
-};
-
-
+}
 
 /**
 * Test if the grid is full

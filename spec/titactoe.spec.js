@@ -27,8 +27,48 @@ describe('TicTacToe', function() {
 		});
 
 		it('should be finished when board is full', function(){
-			game.board.grid = [['O', 'X', 'O'], ['X', 'O', 'X'], ['O', 'O', 'X']]
+			game.board.grid = [['O', 'X', 'O'], ['X', 'O', 'X'], ['O', 'O', 'X']];
 			expect(game.full()).toBeTruthy();
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [['X', 'X', 'X'], [null, null, null], [null, null, null]];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [[null, null, null], ['X', 'X', 'X'], [null, null, null]];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [[null, null, null], [null, null, null], ['X', 'X', 'X']];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [['X', null, null], ['X', null, null], ['X', null, null]];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [[null, 'X', null], [null, 'X', null], [null, 'X', null]];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [[null, null, 'X'], [null, null, 'X'], [null, null, 'X']];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [['X', null, null], [null, 'X', null], [null, null, 'X']];
+			expect(game.winner()).toEqual('X');
+		});
+
+		it('winner should be X', function(){
+			game.board.grid = [[null, null, 'X'], [null, 'X', null], ['X', null, null]];
+			expect(game.winner()).toEqual('X');
 		});
 
 		describe('Board', function(){
@@ -57,6 +97,27 @@ describe('TicTacToe', function() {
 			it('if player2 plays (0, 0) round should equal O', function(){
 				game.play(0,0);
 				expect(game.round).toEqual('X');
+			});
+		});
+
+
+		/**
+		* Test senario
+		*/
+		describe('Senario', function(){
+			it('let\'s play : X winnes', function(){
+				var gameSenario = new Game();
+
+				gameSenario.play(1,1);
+				gameSenario.play(0,0);
+				gameSenario.play(1,2);
+				gameSenario.play(1,0);
+				gameSenario.play(2,0);
+				gameSenario.play(0,2);
+				gameSenario.play(0,1);
+				gameSenario.play(2,2);
+				gameSenario.play(2,2);
+				gameSenario.play(2,1);
 			});
 		});
 
