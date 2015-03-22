@@ -1,11 +1,11 @@
 {
-  "name": "dojo-js-starter",
+  "name": "seed JS Project",
   "version": "0.0.2",
-  "description": "Starter kit JS pour les dojos",
-  "author": "Pierre CLEMENT <pierre.clement@axa.fr>",
+  "description": "Seed for JS Project",
+  "author": "Zakaria RAHIOUI <zakaria.ra@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AxaWebCenter/JS-Starter.git"
+    "url": "https://github.com/ZikasR/JS-Seed.git"
   },
   "dependencies": {
     "prompt": ">= 0.2.x",
