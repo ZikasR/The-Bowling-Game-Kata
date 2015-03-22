@@ -1,6 +1,0 @@
-/**
-* Player
-*/
-function Player() {
-
-};
